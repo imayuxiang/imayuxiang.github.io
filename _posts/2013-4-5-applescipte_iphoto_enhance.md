@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 使用AppleScipte进行iPhoto批量enhance
-category : misc
+category : work
 tags : [iPhoto, AppleScript]
 ---
 
