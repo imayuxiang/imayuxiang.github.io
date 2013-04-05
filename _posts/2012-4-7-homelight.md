@@ -62,7 +62,7 @@ tags : [Android, Java]
 
 ###Drawable ImageView
 
-<img src="/assets/images/blog/HomeLight_Main2.png"/>
+![homelight2]({{ site.img_url }}/HomeLight_Main2.png)
 
 户型图上面的灯光是我直接画上去的，本质是重载了ImageView的OnDraw方法，刷新时调用invalidate()方法。
 
@@ -78,7 +78,7 @@ public void onDraw(Canvas canvas) {
 
 ###ColorPicker Dialog
 
-<img src="/assets/images/blog/HomeLight_ColorPicker.png"/>
+![homelight color picker]({{ site.img_url }}/HomeLight_ColorPicker.png)
 
 要想做一个选出所有颜色的colorpicker还是比较麻烦的，当时用过别人的Library。不过这次只要用有限的灯光，因此就直接自定义了一个Dialog的子类，里面放了个ImageView放图片。当触摸事件产生时，获取图片对应的RGB即可
 
