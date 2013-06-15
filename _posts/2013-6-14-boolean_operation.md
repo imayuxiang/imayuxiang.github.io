@@ -76,4 +76,6 @@ int Setx(double value){data[0]=value;std::cout<<data[0]<<'\t'<<value<<std::endl;
 
 先挂上[DEMO链接](/assets/boolean/index.html)，chrome/firefox都应该无压力，IE也需要新一点才行，因为用了type array来加速
 
-用户手册等有空吧=。=
+~~用户手册等有空吧=。=~~
+
+[用户手册]({% post_url 2013-6-15-threejs_mannual %})
