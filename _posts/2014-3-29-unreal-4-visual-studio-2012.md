@@ -7,6 +7,10 @@ tags : [c++, unreal]
 
 最近尝试了一下在Visual Studio 2012中编译Unreal 4，记录一下其中踩的坑~
 
+## 安装SDK
+
+只需要下载一个windows 8.1 SDK安装即可~突然发现以前每次重装系统后必备的DXSDK_Jun10用不上了，甚伤感~
+
 ## 生成项目文件
 
 首先，修改`Engine\Source\Programs\UnrealBuildTool\Windows\UEBuildWindows.cs`文件中编译器
@@ -76,4 +80,6 @@ ps. nvTextureTools中的nvtt项目使用了CUDA 5.0，而我机器上装的是5.
 
 ## 编译运行
 
-将UE设为启动项目，运行文件为`DebugGame Editor`和`Win64`，直接F5即可！
+将UE设为启动项目，运行文件为`Development Editor`和`Win64`，直接F5即可！
+
+![editor]({{ site.img_url }}/unreal4_3.png)
