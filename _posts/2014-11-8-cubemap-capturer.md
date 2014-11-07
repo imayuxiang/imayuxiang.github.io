@@ -10,7 +10,7 @@ tags : [unity3d]
 实现的思路很简单，在任意GameObject上挂载脚本之后，会自动生成一个摄像机对象。设置一下纹理大小和cubemap文件名之后，点`Build Cubemap`就会生成一个cubemap在关卡文件同级目录下。
 
 ![cubemapcapture1]({{ site.img_url }}/cubemapcapture1.png)
-`Save Image`勾上之后会同步将6个贴图文件也导出；`Preview`如果勾上，则会在Game界面显示、否则会直接弄到render texture上。
+`Save Image`勾上之后会同步导出6个贴图文件；`Preview`如果勾上，则会在Game界面显示、否则会直接弄到render texture上。
 
 ![cubemapcapture2]({{ site.img_url }}/cubemapcapture2.png)
 生成的cubemap文件。
