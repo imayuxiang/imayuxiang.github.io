@@ -2,7 +2,7 @@
 layout: post
 title: 三维模型布尔运算网页版
 category : project
-tags : [Javascript, C++, emscripten, Boolean Operation]
+tags : [JavaScript, C++]
 ---
 
 本学期计算几何课程，选了三维模型布尔运算作为大作业选题。主要考虑到邓公的演示一向比较绚丽多彩，各种PDF和网页中的applet作为demo；我就想把我们最后的东西也搬到网页上来。
@@ -30,7 +30,9 @@ glVertex3dv(v->position.data)
 在使用emscripten编译之前，先手写了一份Makefile用clang++编译一遍，结果发现第一个大坑——**赵老湿用了好多MSVC特有的语法**，在clang下都编译不过T_T
 
 {% highlight c++ %}
-#ifndef readwrite#define readwrite(var) __declspec(property(get=Get##var, put=Set##var)) var#endif
+#ifndef readwrite
+#define readwrite(var) __declspec(property(get=Get##var, put=Set##var)) var
+#endif
 {% endhighlight %}
 
 {% highlight c++ %}

@@ -2,7 +2,7 @@
 layout: post
 title: 乱七八糟的软件工程助教总结
 category : misc
-tags : [Software Engineering, Teaching assistant]
+tags : []
 ---
 
 ### 故事的起源

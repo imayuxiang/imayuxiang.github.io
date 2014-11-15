@@ -2,10 +2,10 @@
 layout: post
 title: pomelo php client
 category : project
-tags : [Javascript, pomelo, PHP]
+tags : [JavaScript, pomelo, PHP]
 ---
 
-# This is depecrated since pomelo is only supporting libpomelo2 with various bindings. I've removed the github repo and you may find the archive here([Download](/assets/pomelo-php-client-master.zip)).
+** This is depecrated since pomelo is only supporting libpomelo2 with various bindings. I've removed the github repo and you may find the archive here([Download](/assets/pomelo-php-client-master.zip)).**
 
 pomelo-php-client
 =================

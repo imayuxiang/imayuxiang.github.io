@@ -2,7 +2,7 @@
 layout: post
 title: Homography
 category : project
-tags : [openCV, C++, graphics]
+tags : [OpenCV, C++]
 ---
 
 Homography单应，说的是投影的时候可以逆过来找，具体的可以戳[wiki](http://en.wikipedia.org/wiki/Homography)。

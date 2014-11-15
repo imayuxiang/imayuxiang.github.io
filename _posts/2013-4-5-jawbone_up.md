@@ -2,7 +2,7 @@
 layout: post
 title: JawBone UP 使用感想
 category : misc
-tags : [JawBone]
+tags : []
 ---
 
 一直想搞个腕带，一个月前盯着Fitbit Wireless, Nike FuelBand和JawBone UP，挑来挑去：

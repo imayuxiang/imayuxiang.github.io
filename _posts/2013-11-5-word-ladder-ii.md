@@ -2,7 +2,7 @@
 layout: post
 title: word ladder 2
 category : misc
-tags : [c++, Java]
+tags : [C++, Java]
 ---
 
 I was blocked by [word ladder ii](http://oj.leetcode.com/problems/word-ladder-ii/) in last two days. 

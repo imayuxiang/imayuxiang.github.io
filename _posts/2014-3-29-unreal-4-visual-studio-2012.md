@@ -2,7 +2,7 @@
 layout: post
 title: Visual Studio 2012编译Unreal 4 
 category : misc
-tags : [c++, unreal]
+tags : [C++, Unreal]
 ---
 
 最近尝试了一下在Visual Studio 2012中编译Unreal 4，记录一下其中踩的坑~

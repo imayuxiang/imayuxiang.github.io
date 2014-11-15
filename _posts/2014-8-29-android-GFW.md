@@ -2,7 +2,7 @@
 layout: post
 title: 如何在国内下载android源代码
 category : misc
-tags : [linux, proxy]
+tags : []
 ---
 
 为了编译libcurl，必须下载android系统源代码，结果发现被某墙弄的基本不能下。我手头只有一个性能很弱的vps，最后没办法走上了双重代理不归路~最后使用了ssh端口转发，然后socks5代理转http代理(其实也可以拿来干别的事情，如上上网什么的)

@@ -2,7 +2,7 @@
 layout: post
 title: Mean Shift with openCV
 category : project
-tags : [openCV, C++]
+tags : [OpenCV, C++]
 ---
 
 主要是讲述关于图片分割的内容，使用了[Mean shift: A robust approach toward feature space analysis](http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=1000236)提出的方法，应该是目前效果最好的几个方法之一了。整个算法分为两步：Filter和Segmentation。这里简单说下实现，具体原理请自行阅读论文(¬_¬)

@@ -2,7 +2,7 @@
 layout: post
 title: Compile libcurl 7.37.0 with Android 4.4 or other versions
 category : misc
-tags : [c++, cocos2d-x, android]
+tags : [C++, cocos2d-x, Android]
 ---
 
 Recently I need compile libcurl for different platforms, since cocos-2dx 3.0 ships with libcurl 7.26.0 and there are several fixes in newer versions according to [changelog](http://curl.haxx.se/changes.html). There are several blogs describing how to build libcurl with android source, such as [porting-of-libcurl-to-android-os-using](http://thesoftwarerogue.blogspot.com/2010/05/porting-of-libcurl-to-android-os-using.html), [How_to_compile_libcurl](http://www.cocos2d-x.org/wiki/How_to_compile_libcurl) and [Android ndk下编译libcurl](http://blog.csdn.net/ly131420/article/details/9177063). However, they are all out dated, especially android source has changed a lot!

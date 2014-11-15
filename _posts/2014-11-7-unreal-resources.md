@@ -2,7 +2,7 @@
 layout: post
 title: 拆解unreal资源
 category : misc
-tags : [unreal, unity3d]
+tags : [Unreal, Unity]
 ---
 
 出于学习的目的(认真脸)，想拆解下别人家的作品的包，看下他们的美术资源是怎么布局、整理的，所以花了一晚上尝试了下，并记录如下。

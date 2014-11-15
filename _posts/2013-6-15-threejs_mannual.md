@@ -2,7 +2,7 @@
 layout: post
 title: Javascript三维布尔模型运算用户手册
 category : work
-tags : [Javascript, Three.js, Boolean Operation]
+tags : [JavaScript]
 ---
 
 [DEMO链接](/assets/boolean/index.html)

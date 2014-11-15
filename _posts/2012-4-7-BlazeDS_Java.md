@@ -2,7 +2,7 @@
 layout: post
 title: 使用BlazeDS进行Java和纯actionscript项目通信
 category : work
-tags : [Flex, BlazeDS, Java]
+tags : [Java]
 ---
 
 前段时间在帮着做一个网络模块，背景是一个actionscript的项目和后台服务器进行数据交换。最后选择了[BlazeDS](http://opensource.adobe.com/wiki/display/blazeds/BlazeDS)的解决方案，使用HTTP封装的AMF协议进行通信。交换的数据中有各种数组和自定义类，blazeDS基本上都能自动序列化和反序列化，因此用的比较舒服。但一开始配置环境的时候遇到了各种奇怪的问题，特别有一个问题网上搜索只有在一个post里提到，因此很值得记录。

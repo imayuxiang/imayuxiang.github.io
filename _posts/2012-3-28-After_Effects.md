@@ -2,7 +2,7 @@
 layout: post
 title: 几个简单After Effects特效
 category : misc
-tags : [after effects]
+tags : []
 ---
 
 Adobe After Effects是个很强大的工具！之前一直想学了拿来做MAD玩的，可惜貌似一直没空。这次正好毕业DV可以做点特效，一方面是正好不用露脸-。-还可以做点贡献嗯嗯。

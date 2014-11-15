@@ -2,7 +2,7 @@
 layout: post
 title: ImagePicker for cocos2d-x
 category : project
-tags : [c++, cocos2dx]
+tags : [C++, cocos2d-x]
 ---
 
 This utility is able to load images from system photo library. Native calls for Android, iOS(iPhone+iPad) & Win32.

@@ -2,7 +2,7 @@
 layout: post
 title: 使用AppleScipte进行iPhoto批量enhance
 category : work
-tags : [iPhoto, AppleScript]
+tags : []
 ---
 
 嗯，这是拖了很久的一篇日志了~上个暑假实习的时候做的事情是照片的自动增强，与iPhoto的enhance进行了比较。但是需要生成几千张照片的批量enhance比较麻烦~
