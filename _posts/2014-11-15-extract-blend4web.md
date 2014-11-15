@@ -2,7 +2,7 @@
 layout: post
 title: 拆解blend4web资源
 category : misc
-tags : [JavaScripot]
+tags : [JavaScript]
 ---
 
 昨儿有人给我发了一个[神秘网址](https://dl.dropboxusercontent.com/u/76187276/test.html)，表示希望能获得资源~~拿去lu~~
