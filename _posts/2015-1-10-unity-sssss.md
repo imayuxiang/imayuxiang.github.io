@@ -20,3 +20,5 @@ tags : [Unity]
 - 最后还尝试了在`OnPostRender()`里搞，如果是相机有RT的话、这样能读取到stencil倒是，不过会有[其他的问题](http://answers.unity3d.com/questions/799941/blit-camera-targettexture-to-screen.html)
 
 反正就是各种蛋疼，N5上都只有30fps；实在不行只能考虑纹理空间的SSS了，不然每次算整个屏幕太费了~
+
+Download: [SSSSS.shader](/assets/unity/SSSSS.shader) [SSSSS.cs](/assets/unity/SSSSS.cs)

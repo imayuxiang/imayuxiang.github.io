@@ -19,4 +19,4 @@ tags : [Unity]
 
 如果需要特殊效果，可以在这个GameObject上贴上各种后处理脚本并预览。反正这个东西也写的很简单，就纯当练手用了……学习了一下纹理抓取、保存、inspector GUI设置等，顺便发现了纹理的y真是麻烦啊。
 
-脚本下载：[CubemapCaptureEditor.cs](/assets/unity/CubemapCaptureEditor.cs) [CubemapCaptureScript.cs](/assets/unity/CubemapCaptureScript.cs) 
+Download：[CubemapCaptureEditor.cs](/assets/unity/CubemapCaptureEditor.cs) [CubemapCaptureScript.cs](/assets/unity/CubemapCaptureScript.cs) 
