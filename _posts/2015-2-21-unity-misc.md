@@ -40,3 +40,13 @@ Matrix4x4 proj = camera.projectionMatrix;
 ## 执行流程
 
 [Execution Order of Event Functions](docs.unity3d.com/Manual/ExecutionOrder.html)里面有一张图，是可用函数的调用顺序~然后在写代码的时候发现unity自己的渲染管线很容易被搞乱，应该是它代码里的各种检查不够多……总之写起来各种小心~ 譬如`RenderTexture.active`和`Graphics.Blit`之间就会影响。。。
+
+## `Camera.projectionMatrix`
+
+之前我写在`onPreRender()`里，后来把代码扔到Shadow Gun Sample Level之后发现无效，又去查了下也是放到`Update()`里才行，奇怪奇怪~
+
+总之还是要多多参考Execution Order，黑盒无奈>_<
+
+## `Screen.width`和`Screen.height`
+
+获取分辨率不能放在`onEnable()`，不然禁用之后重新启用会获得奇怪的数据(真坑)……最后我也是塞到`Update()`里
