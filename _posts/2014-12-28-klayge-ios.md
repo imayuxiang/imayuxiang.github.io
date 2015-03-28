@@ -2,7 +2,7 @@
 layout: post
 title: KlayGE移植iOS进行中...
 category : project
-tags : [C++]
+tags : [KlayGE, C++]
 ---
 
 这个帖子估计持续更新时间会很长...记录移植KlayGE到iOS中的坑ing~不少坑之前在[移植OSX]({% post_url 2014-12-20-port-klayge %})的时候已经踩过了，这里就不再赘述。

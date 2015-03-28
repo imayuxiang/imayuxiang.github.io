@@ -2,7 +2,7 @@
 layout: post
 title: KlayGE移植到OSX的尝试
 category : project
-tags : [C++]
+tags : [KlayGE, C++]
 ---
 
 之前一直有准备在研三的业余时间深入学习一套引擎，备选如下：
