@@ -13,10 +13,9 @@ markdown: rdiscount
 title : "Loading & Learning"
 tagline: Site Tagline
 author :
-  name : Kanglai Qian
-  email : qiankanglai@gmail.com
-  github : qiankanglai
-  weibo : diaobaolo
+  name : imayuxiang
+  email : losywar@mail.163.com
+  github : imayuxiang
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,7 +25,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://qiankanglai.github.com
+production_url : http://imayuxiang.github.io
 img_url: /assets/images
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
@@ -84,7 +83,7 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : qiankanglai
+      short_name : imayuxiang
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
