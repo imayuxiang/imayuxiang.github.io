@@ -33,7 +33,7 @@ Menubar.Help = function ( signals ) {
 	var option = new UI.Panel();
 	option.setClass( 'option' );
 	option.setTextContent( 'About Project' );
-	option.onClick( function () { alert("Author: Kanglai Qian, Hongze Zhao, Xianyu Chen"); } );
+	option.onClick( function () { alert("Author: imayuxiang"); } );
 	options.add( option );
 
 	var option = new UI.Panel();
