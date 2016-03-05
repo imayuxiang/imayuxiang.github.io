@@ -1,0 +1,77 @@
+<nav id="dl-menu" class="dl-menuwrapper" role="navigation">
+	<button class="dl-trigger">Open Menu</button>
+	<ul class="dl-menu">
+		<li><a href="{{ site.url }}/">Home</a></li>
+		<li>
+			<a href="#">About</a>
+			<ul class="dl-submenu">
+				<li>
+					<img src="{{ site.url }}/images/{{ site.owner.avatar }}" alt="{{ site.owner.name }} photo" class="author-photo">
+					<h4>{{ site.owner.name }}</h4>
+					<p>{{ site.owner.bio }}</p>
+				</li>
+				<li><a href="{{ site.url }}/about/"><span class="btn btn-inverse">Learn More</span></a></li>
+				{% if site.owner.email %}<li>
+					<a href="mailto:{{ site.owner.email }}"><i class="fa fa-fw fa-envelope"></i> Email</a>
+				</li>{% endif %}
+				{% if site.owner.twitter %}<li>
+					<a href="https://twitter.com/{{ site.owner.twitter }}"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+				</li>{% endif %}
+				{% if site.owner.facebook %}<li>
+					<a href="https://facebook.com/{{ site.owner.facebook }}"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+				</li>{% endif %}
+				{% if site.owner.google_plus %}<li>
+					<a href="https://google.com/{{ site.owner.google_plus }}"><i class="fa fa-fw fa-google-plus"></i> Google+</a>
+				</li>{% endif %}
+				{% if site.owner.linkedin %}<li>
+					<a href="https://linkedin.com/in/{{ site.owner.linkedin }}"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+				</li>{% endif %}
+				{% if site.owner.github %}<li>
+					<a href="https://github.com/{{ site.owner.github }}"><i class="fa fa-fw fa-github"></i> GitHub</a>
+				</li>{% endif %}
+				{% if site.owner.stackexchange %}<li>
+					<a href="{{ site.owner.stackexchange }}"><i class="fa fa-fw fa-stack-exchange"></i> Stackexchange</a>
+				</li>{% endif %}
+				{% if site.owner.instagram %}<li>
+					<a href="https://instagram.com/{{ site.owner.instagram }}"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+				</li>{% endif %}
+				{% if site.owner.flickr %}<li>
+					<a href="https://www.flickr.com/photos/{{ site.owner.flickr }}"><i class="fa fa-fw fa-flickr"></i> Flickr</a>
+				</li>{% endif %}
+				{% if site.owner.tumblr %}<li>
+					<a href="http://{{ site.owner.tumblr }}.tumblr.com"><i class="fa fa-fw fa-tumblr"></i> Tumblr</a>
+				</li>{% endif %}
+				{% if site.owner.zhihu %}<li>
+					<a href="https://www.zhihu.com/people/{{ site.owner.zhihu }}">
+						<svg width="16" height="16" viewBox="0 0 32 32">
+						    <g class="transform-group">
+						      <g transform="translate(0, 28.0) scale(1, -1) scale(0.03125, 0.03125)">
+						        <path d="M940.350346 100.124628c0-78.651314-63.771419-142.42171-142.42171-142.42171L228.226446-42.297083c-78.655408 0-142.42785 63.772442-142.42785 142.42171L85.798597 669.825794c0 78.657454 63.772442 142.43092 142.42785 142.43092l569.70219 0c78.658478 0 142.431943-63.771419 142.431943-142.43092L940.350346 100.124628 940.350346 100.124628 940.350346 100.124628zM415.621441 352.643851l125.592416 0c0 29.528524-13.923104 46.824445-13.923104 46.824445L418.29534 399.468296c2.589988 53.492308 4.909823 122.148991 5.738701 147.648758l103.677291 0c0 0-0.561795 43.872207-12.091386 43.872207L333.378321 590.989261c0 0 10.970866 57.373709 25.593911 82.700537 0 0-54.417377 2.936889-72.981175-69.622684-18.560728-72.559573-46.402843-116.430756-49.355081-124.446313-2.953262-8.012488 16.031115-3.794419 24.043602 0 8.015557 3.797489 44.294832 16.876366 54.840002 67.496254l56.350402 0c0.760317-32.081673 2.990101-130.396839 2.287089-147.648758L258.148943 399.468296c-16.449647-11.809977-21.935592-46.824445-21.935592-46.824445l132.591831 0c-5.529947-36.614919-15.239076-83.812871-28.817326-108.834754-21.512966-39.655162-32.903388-75.934436-110.525256-138.368394 0 0-12.656251-9.280364 26.576285-5.9055 39.231513 3.371794 76.356039 13.497409 102.087073 64.962547 13.377682 26.756387 27.212782 60.697407 38.005592 95.121428l-0.038886-0.12075 109.259426-125.794008c0 0 14.34266 33.746592 3.797489 70.870094l-80.993662 90.697675-27.41949-20.278859-0.031722-0.099261c7.615445 26.700105 13.09218 53.095265 14.794961 76.061326C415.541623 351.507982 415.583578 352.07387 415.621441 352.643851L415.621441 352.643851zM415.621441 352.643851M567.366494 600.269625l0-435.349249 45.77044 0 18.752086-52.405557 79.32772 52.405557 99.978039 0L811.194778 600.269625 567.366494 600.269625 567.366494 600.269625zM764.089947 211.746868l-51.967582 0-64.817238-42.817178-15.318894 42.817178-16.177448 0L615.808786 551.68714l148.280138 0L764.088924 211.746868 764.089947 211.746868zM764.089947 211.746868" fill="#FFFFFF"></path>
+						      </g>
+						    </g>
+						  </svg>
+						  ZhiHu
+					</a>
+				</li>{% endif %}
+				{% if site.owner.weibo %}<li>
+					<a href="http://weibo.com/{{ site.owner.weibo }}"><i class="fa fa-fw fa-weibo"></i> Weibo</a>
+				</li>{% endif %}
+			</ul><!-- /.dl-submenu -->
+		</li>
+		<li>
+			<a href="#">Posts</a>
+			<ul class="dl-submenu">
+				<li><a href="{{ site.url }}/posts/">All Posts</a></li>
+				<li><a href="{{ site.url }}/tags/">All Tags</a></li>
+			</ul>
+		</li>
+		{% for link in site.data.navigation %}
+	    {% if link.url contains 'http' %}
+	        {% assign domain = '' %}
+	        {% else %}
+	        {% assign domain = site.url %}
+	    {% endif %}
+	    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+	  {% endfor %}
+	</ul><!-- /.dl-menu -->
+</nav><!-- /.dl-menuwrapper -->
