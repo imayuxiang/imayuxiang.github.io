@@ -18,7 +18,7 @@ I'm a big fan of rendering and started playing around this when I was an undergr
 Also I like ACG a lot, along with figma, Gundam and so on :D
 
 {:refdef: style="text-align: center;"}
-![portait]({{ site.url }}/images/qiankanglai.png) ![figma]({{ site.url }}/images/figma.jpg)  ![figma2]({{ site.url }}/images/figma2.jpg)
+![portait]({{ site.url }}/images/author.png) ![figma]({{ site.url }}/images/figma.jpg)  ![figma2]({{ site.url }}/images/figma2.jpg)
 {: refdef}
 
 ## Education
