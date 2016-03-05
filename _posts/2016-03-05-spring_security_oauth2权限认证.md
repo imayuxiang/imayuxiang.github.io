@@ -23,18 +23,21 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
 第三种 通过client_id提交到oauth/authorize获得code，再通过code获得access_token 
 	"网站"提供了一个超链接，名字叫"Login using appDemo"，链接为：
 	http://localhost:8080/appDemo/oauth/authorize?client_id=m1&redirect_uri=http%3a	%2f%2flocalhost%3a8080%2f&response_type=code&scope=read
-	先跳转到登录界面让用户登录
-	跳转回了刚才的returnUri，并且添加了code参数：http://localhost:8080/?code=VOUIRc
-	现在，client拿到了code，这个code就是Authorization Code，下面这步是client要做的
-	由于没有现成的client,我们可以用一些REST tool来模拟client向appDemo申请AccessToken的过程
-	tool包括：firefox的REST client，Chrome的POSTMan，真正使用的时候，client需要使用后台代码发http请求，前端Ajax会有跨域限制
+	
+先跳转到登录界面让用户登录 跳转回了刚才的returnUri，并且添加了code参数：http://localhost:8080/?code=VOUIRc 
+现在，client拿到了code，这个code就是Authorization Code，下面这步是client要做的
+由于没有现成的client,我们可以用一些REST tool来模拟client向appDemo申请AccessToken的过程
+tool包括：firefox的REST client，Chrome的POSTMan，真正使用的时候，client需要使用后台代码发http请求，前端Ajax会有跨域限制
+
 	Client可以直接发起个请求(Method要用Post)来获取Access Token:
 	http://localhost:8080/appDemo/oauth/token?code=g6hW13&client_id=m1&client_secret=s1&grant_type=authorization_code&redirect_uri=http%3a%2f%2flocalhost%3a8080%2f
-	注意把这个URL中的code替换成前面一步生成的code
+
+注意把这个URL中的code替换成前面一步生成的code
 	
 配置文件如下
 
-	 <!--针对不同resource的http配置, 由于上面配置了两个resource,-->
+针对不同resource的http配置, 由于上面配置了两个resource
+
     <http pattern="/app/**" create-session="never"
           entry-point-ref="oauth2AuthenticationEntryPoint"
           access-decision-manager-ref="oauth2AccessDecisionManager">
@@ -49,7 +52,8 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
     <oauth2:resource-server id="mobileResourceServer"
                             resource-id="mobile-resource" token-services-ref="tokenServices"/>
 
-    <!--/oauth/token 的http 配置, 用于监听该URL的请求, 核心-->
+ /oauth/token 的http 配置, 用于监听该URL的请求, 核心
+ 
     <http pattern="/oauth/token" create-session="stateless"
           authentication-manager-ref="oauth2AuthenticationManager"
           entry-point-ref="oauth2AuthenticationEntryPoint">
@@ -61,11 +65,14 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
         <access-denied-handler error-page="/login?authorization_error=2"/>
     </http>
 
-    <!--oauth2 AuthenticationManager配置; 在整个配置中,有两个AuthenticationManager需要配置-->
+oauth2 AuthenticationManager配置; 在整个配置中,有两个AuthenticationManager需要配置
+
     <authentication-manager id="oauth2AuthenticationManager">
         <authentication-provider user-service-ref="oauth2ClientDetailsUserService"/>
     </authentication-manager>
-    <!--第二个AuthenticationManager用于向获取UserDetails信息,-->
+
+第二个AuthenticationManager用于向获取UserDetails信息
+
     <beans:bean id="myUserDetailsService" class="com.july.aboutiming.security.MyUserDetailsService"/>
     <authentication-manager alias="authenticationManager">
         <authentication-provider user-service-ref="myUserDetailsService">
@@ -73,29 +80,35 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
         </authentication-provider>
     </authentication-manager>
 
-    <!--ClientDetailsUserDetailsService配置, 该类实现了Spring security中 UserDetailsService 接口-->
+  ClientDetailsUserDetailsService配置, 该类实现了Spring security中 UserDetailsService 接口
+  
     <beans:bean id="oauth2ClientDetailsUserService"
                 class="org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService">
         <beans:constructor-arg ref="clientDetailsService"/>
     </beans:bean>
 
-    <!--ClientCredentialsTokenEndpointFilter配置, 该Filter将作用于Spring Security的chain 链条中-->
+  ClientCredentialsTokenEndpointFilter配置, 该Filter将作用于Spring Security的chain 链条中
+  
     <beans:bean id="clientCredentialsTokenEndpointFilter"
                 class="org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter">
         <beans:property name="authenticationManager" ref="oauth2AuthenticationManager"/>
     </beans:bean>
 
-    <!--OAuth2AuthenticationEntryPoint配置-->
+  OAuth2AuthenticationEntryPoint配置
+    
     <beans:bean id="oauth2AuthenticationEntryPoint"
                 class="org.springframework.security.oauth2.provider.error.OAuth2AuthenticationEntryPoint"/>
-    <!--OAuth2AccessDeniedHandler配置, 实现AccessDeniedHandler接口-->
+ 
+ OAuth2AccessDeniedHandler配置, 实现AccessDeniedHandler接口
+ 
     <beans:bean id="oauthAccessDeniedHandler"
                 class="org.springframework.security.oauth2.provider.error.OAuth2AccessDeniedHandler"/>
     <beans:bean id="oauthUserApprovalHandler"
                 class="org.springframework.security.oauth2.provider.approval.DefaultUserApprovalHandler"/>
 
-    <!--ClientDetailsService 配置, 使用JdbcClientDetailsService,
-     这里直接用内存的 也需要提供dataSource, 替换demo中直接配置在配置文件中-->
+ ClientDetailsService 配置, 使用JdbcClientDetailsService,
+     这里直接用内存的 也需要提供dataSource, 替换demo中直接配置在配置文件中
+
     <oauth2:client-details-service id="clientDetailsService">
 
         <!-- Allow access to test clients -->
@@ -148,7 +161,8 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
 
     </oauth2:client-details-service>
 
-    <!--TokenStore, 使用JdbcTokenStore, 将token信息存放数据库, 需要提供一个dataSource对象; 也可使用InMemoryTokenStore存于内存中-->
+ TokenStore, 使用JdbcTokenStore, 将token信息存放数据库, 需要提供一个dataSource对象; 也可使用InMemoryTokenStore存于内存中
+ 
     <beans:bean id="tokenStore"
                 class="org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore">
     </beans:bean>
@@ -156,7 +170,9 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
     <!--<beans:bean id="tokenStore" class="org.springframework.security.oauth2.provider.token.JdbcTokenStore">-->
     <!--<beans:constructor-arg index="0" ref="dataSource"/>-->
     <!--</beans:bean>-->
-    <!--TokenServices; 需要注入TokenStore,如果允许刷新token 请将supportRefreshToken 的值设置为true, 默认为不允许-->
+    
+ TokenServices; 需要注入TokenStore,如果允许刷新token 请将supportRefreshToken 的值设置为true, 默认为不允许
+ 
     <beans:bean id="tokenServices"
                 class="org.springframework.security.oauth2.provider.token.DefaultTokenServices">
         <beans:property name="tokenStore" ref="tokenStore"/>
@@ -164,7 +180,8 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
         <beans:property name="clientDetailsService" ref="clientDetailsService"/>
     </beans:bean>
 
-    <!--authorization-server配置, 核心  这里可以配置授权方式 4种 implicit还没弄明白-->
+ authorization-server配置, 核心  这里可以配置授权方式 4种 implicit还没弄明白
+ 
     <oauth2:authorization-server
             client-details-service-ref="clientDetailsService" token-services-ref="tokenServices"
             user-approval-handler-ref="oauthUserApprovalHandler"
@@ -176,7 +193,8 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
         <oauth2:password/>
     </oauth2:authorization-server>
 
-    <!--Oauth2 AccessDecisionManager配置, 这儿在默认的Spring Security AccessDecisionManager的基础上添加了ScopeVoter-->
+  Oauth2 AccessDecisionManager配置, 这儿在默认的Spring Security AccessDecisionManager的基础上添加了ScopeVoter
+  
     <beans:bean id="oauth2AccessDecisionManager"
                 class="org.springframework.security.access.vote.UnanimousBased">
         <beans:constructor-arg>
@@ -189,6 +207,8 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
             </beans:list>
         </beans:constructor-arg>
     </beans:bean>
+
+默认的http配置,给/oauth/** 设置权限
 
     <http  authentication-manager-ref="authenticationManager" disable-url-rewriting="true"
            access-denied-page="/login?authorization_error=2">
@@ -203,4 +223,4 @@ http://porterhead.blogspot.co.id/2014/05/securing-rest-services-with-spring.html
         <anonymous/>
     </http>
         
-security相对比较复杂，spring跟微软的做法差不多，什么都弄到一起，demo又写的一般不花点时间看不太明白，一时半会很难弄明白，相对shiro比较简单易懂，容易上手，操作起来也更简单，等有时间了再弄一个shiro的
+security相对比较复杂，spring跟微软的风格差不多，什么都弄到一起，demo又写的一般不花点时间看不太明白，一时半会很难弄明白，相对shiro比较简单易懂，容易上手，操作起来也更简单，等有时间了再弄一个shiro的
